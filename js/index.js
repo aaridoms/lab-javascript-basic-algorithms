@@ -73,6 +73,13 @@ const longText = `Lorem ipsum dolor sit amet, consectetur adipiscing elit.
     est justo consequat justo, a porttitor metus turpis eget dolorK`
 
 let counter = 0;
+let wordCounter = 0;
+
+for(let i = 0; i < longText.length; i++) {
+  if (longText[i] === " ") {
+    wordCounter++;
+  }
+}
 
 for(let i = 0; i < longText.length; i++) {
     if (longText[i] === 'e' && longText[i+1] === 't') {
@@ -80,4 +87,5 @@ for(let i = 0; i < longText.length; i++) {
     }
 }
 
+console.log(`Hay ${wordCounter} palabras`);
 console.log(`Hay ${counter} veces 'et'`);
